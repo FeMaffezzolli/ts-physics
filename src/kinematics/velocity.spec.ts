@@ -24,4 +24,13 @@ describe('velocity', async () => {
     })
     expect(velocity).equal(10)
   })
+
+  it('should calculate the current velocity.', () => {
+    const velocity = currentVelocity({
+      initialVelocity: 5,
+      averageAcceleration: 10,
+      timeElapsedInHours: 1.5
+    })
+    expect(velocity).equal(20)
+  })
 })
